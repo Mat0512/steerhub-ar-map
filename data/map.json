@@ -1,0 +1,166 @@
+{
+  "destinations": [
+    {
+      "id": "registration",
+      "name": "Registration",
+      "floor": 5,
+      "hint": "Near elevator & stairs",
+      "color": "#4CAF50"
+    },
+    {
+      "id": "hackspace",
+      "name": "Hack Space",
+      "floor": 5,
+      "hint": "Main hall — primary hacking area",
+      "color": "#2196F3"
+    },
+    {
+      "id": "food",
+      "name": "Food & Drinks",
+      "floor": 5,
+      "hint": "Inside the main hall",
+      "color": "#FF9800"
+    },
+    {
+      "id": "pitching",
+      "name": "Event Pitching",
+      "floor": 4,
+      "hint": "Floor 4 — room TBC",
+      "color": "#9C27B0"
+    },
+    {
+      "id": "cr",
+      "name": "CR",
+      "floor": 3,
+      "hint": "Comfort Room — Floor 3",
+      "color": "#00BCD4"
+    },
+    {
+      "id": "emergency-exit",
+      "name": "Emergency Exit",
+      "floor": 3,
+      "hint": "Nearest emergency exit — Floor 3",
+      "color": "#F44336"
+    },
+    {
+      "id": "devels-office",
+      "name": "Devel's Office",
+      "floor": 3,
+      "hint": "Floor 3",
+      "color": "#FFC107"
+    },
+    {
+      "id": "simulation-lab",
+      "name": "Simulation Lab",
+      "floor": 3,
+      "hint": "Floor 3",
+      "color": "#009688"
+    }
+  ],
+  "locations": {
+    "floor5-elevator": {
+      "name": "Floor 5 — Elevator / Stairs",
+      "floor": 5,
+      "routes": {
+        "registration": {
+          "bearing": 345,
+          "distance": "~10m",
+          "steps": "Walk straight from the elevator/stairs — Registration desk is right ahead"
+        },
+        "hackspace": {
+          "bearing": 258,
+          "distance": "~30m",
+          "steps": "Walk past Registration and continue into the main hall"
+        },
+        "food": {
+          "bearing": 245,
+          "distance": "~35m",
+          "steps": "Walk past Registration into the main hall — Food area is inside"
+        },
+        "pitching": {
+          "bearing": 355,
+          "distance": "1 floor down",
+          "steps": "Take the elevator or stairs down to Floor 4"
+        }
+      }
+    },
+    "floor5-hall": {
+      "name": "Floor 5 — Main Hall",
+      "floor": 5,
+      "routes": {
+        "registration": {
+          "bearing": 345,
+          "distance": "~20m",
+          "steps": "Head back toward the hall entrance — Registration is near the elevator/stairs"
+        },
+        "hackspace": {
+          "bearing": 258,
+          "distance": "~5m",
+          "steps": "You are in the main hall — Hack Space is around you"
+        },
+        "food": {
+          "bearing": 245,
+          "distance": "~10m",
+          "steps": "Food area is inside this hall — look for the food tables"
+        },
+        "pitching": {
+          "bearing": 355,
+          "distance": "1 floor down",
+          "steps": "Exit the hall, take elevator or stairs down to Floor 4"
+        }
+      }
+    },
+    "floor4-entrance": {
+      "name": "Floor 4 — Elevator / Stairs",
+      "floor": 4,
+      "routes": {
+        "pitching": {
+          "bearing": 0,
+          "distance": "TBC",
+          "steps": "Room/hall TBC — exact location to be confirmed on-site"
+        },
+        "registration": {
+          "bearing": 0,
+          "distance": "1 floor up",
+          "steps": "Take the elevator or stairs up to Floor 5 — Registration is near the exit"
+        },
+        "hackspace": {
+          "bearing": 0,
+          "distance": "1 floor up",
+          "steps": "Take the elevator or stairs up to Floor 5 — enter the main hall"
+        },
+        "food": {
+          "bearing": 0,
+          "distance": "1 floor up",
+          "steps": "Take the elevator or stairs up to Floor 5 — Food is inside the main hall"
+        }
+      }
+    },
+    "floor3-entrance": {
+      "name": "Floor 3 — Elevator / Stairs",
+      "floor": 3,
+      "routes": {
+        "cr": {
+          "bearing": 201,
+          "distance": "TBC",
+          "steps": "TBC — measure bearing on-site"
+        },
+        "emergency-exit": {
+          "bearing": 266,
+          "distance": "TBC",
+          "steps": "TBC — measure bearing on-site"
+        },
+        "devels-office": {
+          "bearing": 0,
+          "distance": "TBC",
+          "steps": "TBC — measure bearing on-site"
+        },
+        "simulation-lab": {
+          "bearing": 259,
+          "distance": "TBC",
+          "steps": "TBC — measure bearing on-site"
+        }
+      }
+    }
+  }
+}

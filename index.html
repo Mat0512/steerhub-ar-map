@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0d0d1a">
+  <title>Hackathon Map</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Camera feed -->
+  <video id="camera" autoplay muted playsinline></video>
+
+  <!-- AR canvas overlay -->
+  <canvas id="overlay"></canvas>
+
+  <!-- iOS: tap to enable camera + compass -->
+  <div id="start-screen" class="hidden">
+    <div class="start-card">
+      <div class="start-logo">AR</div>
+      <h2>Hackathon Map</h2>
+      <p>Tap below to enable the camera and compass so we can point you in the right direction.</p>
+      <button id="start-btn">Enable &amp; Start</button>
+    </div>
+  </div>
+
+  <!-- Destination detail card -->
+  <div id="detail-card" class="hidden">
+    <button id="close-btn" aria-label="Close">&times;</button>
+    <h3 id="detail-name"></h3>
+    <p id="detail-floor" class="detail-meta"></p>
+    <p id="detail-hint" class="detail-meta"></p>
+    <hr>
+    <p id="detail-distance" class="detail-distance"></p>
+    <p id="detail-steps" class="detail-steps"></p>
+  </div>
+
+  <!-- Bottom destination strip -->
+  <div id="dest-strip" class="hidden"></div>
+
+  <!-- Compass unavailable notice -->
+  <div id="compass-notice" class="hidden">
+    <span>Compass unavailable — arrows show fixed directions</span>
+  </div>
+
+  <!-- No ?from= param: show venue directory -->
+  <div id="index-screen" class="hidden">
+    <div class="index-header">
+      <div class="start-logo">AR</div>
+      <h1>Hackathon Venue</h1>
+      <p>Scan a QR code at any location below to get live directions.</p>
+    </div>
+    <ul id="location-list"></ul>
+    <p class="index-hint">QR codes are posted at each location on the wall near the elevator/stairs.</p>
+  </div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
